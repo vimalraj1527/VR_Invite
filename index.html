@@ -319,6 +319,112 @@
         </button>
       </div>
 
+      <!-- Interactive Blessing Lamp -->
+      <div class="blessing-lamp-section reveal">
+        <h3 class="lamp-title">Light the Lamp to Bless Us</h3>
+        <div class="interactive-lamp" onclick="lightLamp(this)">
+          <svg viewBox="0 0 100 200" class="hindu-lamp">
+            <defs>
+              <linearGradient id="lamp-brass" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#5c3a0d"/>
+                <stop offset="25%" stop-color="#d4af37"/>
+                <stop offset="50%" stop-color="#fff6cc"/>
+                <stop offset="75%" stop-color="#d4af37"/>
+                <stop offset="100%" stop-color="#3b2609"/>
+              </linearGradient>
+              <linearGradient id="lamp-brass-dark" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#3b2609"/>
+                <stop offset="35%" stop-color="#b8860b"/>
+                <stop offset="65%" stop-color="#b8860b"/>
+                <stop offset="100%" stop-color="#2a1a05"/>
+              </linearGradient>
+              <filter id="flame-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feComponentTransfer in="blur" result="glow">
+                  <feFuncA type="linear" slope="2"/>
+                </feComponentTransfer>
+                <feMerge>
+                  <feMergeNode in="glow" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            
+            <!-- Hanging Chains -->
+            <path d="M50,0 L50,60" stroke="url(#lamp-brass-dark)" stroke-width="4" stroke-dasharray="4,2"/>
+            <path d="M48,0 L48,60" stroke="url(#lamp-brass)" stroke-width="2" stroke-dasharray="4,2"/>
+            <path d="M52,0 L52,60" stroke="url(#lamp-brass)" stroke-width="2" stroke-dasharray="4,2"/>
+            
+            <!-- Top Hook/Ring -->
+            <ellipse cx="50" cy="55" rx="4" ry="6" fill="none" stroke="url(#lamp-brass)" stroke-width="2"/>
+
+            <!-- Decorative Umbrella / Dome -->
+            <path d="M50,60 C30,65 20,80 15,90 L85,90 C80,80 70,65 50,60 Z" fill="url(#lamp-brass)"/>
+            <!-- Dome Ribs -->
+            <path d="M50,60 Q35,75 25,90 M50,60 Q50,75 50,90 M50,60 Q65,75 75,90" fill="none" stroke="url(#lamp-brass-dark)" stroke-width="1.5"/>
+            <!-- Umbrella Bottom Rim -->
+            <rect x="12" y="90" width="76" height="4" rx="2" fill="url(#lamp-brass-dark)"/>
+
+            <!-- Hanging Bells from Umbrella Rim -->
+            <path d="M20,94 L20,100 M35,94 L35,100 M50,94 L50,100 M65,94 L65,100 M80,94 L80,100" stroke="url(#lamp-brass)" stroke-width="1.5"/>
+            <!-- Bells -->
+            <path d="M17,100 Q20,97 23,100 L23,103 L17,103 Z" fill="url(#lamp-brass)"/>
+            <circle cx="20" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
+            <path d="M32,100 Q35,97 38,100 L38,103 L32,103 Z" fill="url(#lamp-brass)"/>
+            <circle cx="35" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
+            <path d="M47,100 Q50,97 53,100 L53,103 L47,103 Z" fill="url(#lamp-brass)"/>
+            <circle cx="50" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
+            <path d="M62,100 Q65,97 68,100 L68,103 L62,103 Z" fill="url(#lamp-brass)"/>
+            <circle cx="65" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
+            <path d="M77,100 Q80,97 83,100 L83,103 L77,103 Z" fill="url(#lamp-brass)"/>
+            <circle cx="80" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
+
+            <!-- Stem -->
+            <rect x="46" y="94" width="8" height="40" fill="url(#lamp-brass)"/>
+            <ellipse cx="50" cy="110" rx="10" ry="4" fill="url(#lamp-brass-dark)"/>
+            <ellipse cx="50" cy="125" rx="12" ry="5" fill="url(#lamp-brass-dark)"/>
+
+            <!-- Oil Bowl (Agal) -->
+            <path d="M15,135 Q50,175 85,135 Q50,150 15,135 Z" fill="url(#lamp-brass)"/>
+            <ellipse cx="50" cy="135" rx="35" ry="6" fill="#3b2609"/>
+            
+            <!-- 5 Wicks Spouts -->
+            <path d="M25,137 L12,127 Q18,133 22,135 Z" fill="url(#lamp-brass)"/>
+            <path d="M35,139 L25,129 Q30,135 35,137 Z" fill="url(#lamp-brass)"/>
+            <path d="M50,140 L50,130" stroke="url(#lamp-brass)" stroke-width="4"/>
+            <path d="M65,139 L75,129 Q70,135 65,137 Z" fill="url(#lamp-brass)"/>
+            <path d="M75,137 L88,127 Q82,133 78,135 Z" fill="url(#lamp-brass)"/>
+
+            <!-- Bottom Hanging Base Drop -->
+            <path d="M35,145 Q50,175 50,190 Q50,175 65,145 Z" fill="url(#lamp-brass)"/>
+            <ellipse cx="50" cy="160" rx="10" ry="4" fill="url(#lamp-brass-dark)"/>
+            <!-- Final Point -->
+            <circle cx="50" cy="192" r="3" fill="url(#lamp-brass)"/>
+
+            <!-- Flames -->
+            <g class="lamp-flames">
+              <!-- Left 1 -->
+              <path d="M12,127 Q8,117 12,110 Q16,117 12,127 Z" fill="#FFD700" filter="url(#flame-glow)"/>
+              <path d="M12,127 Q10,120 12,115 Q14,120 12,127 Z" fill="#FFF"/>
+              <!-- Left 2 -->
+              <path d="M25,129 Q21,119 25,112 Q29,119 25,129 Z" fill="#FFD700" filter="url(#flame-glow)"/>
+              <path d="M25,129 Q23,122 25,117 Q27,122 25,129 Z" fill="#FFF"/>
+              <!-- Center -->
+              <path d="M50,130 Q45,115 50,105 Q55,115 50,130 Z" fill="#FFD700" filter="url(#flame-glow)"/>
+              <path d="M50,130 Q48,120 50,113 Q52,120 50,130 Z" fill="#FFF"/>
+              <!-- Right 2 -->
+              <path d="M75,129 Q71,119 75,112 Q79,119 75,129 Z" fill="#FFD700" filter="url(#flame-glow)"/>
+              <path d="M75,129 Q73,122 75,117 Q77,122 75,129 Z" fill="#FFF"/>
+              <!-- Right 1 -->
+              <path d="M88,127 Q84,117 88,110 Q92,117 88,127 Z" fill="#FFD700" filter="url(#flame-glow)"/>
+              <path d="M88,127 Q86,120 88,115 Q90,120 88,127 Z" fill="#FFF"/>
+            </g>
+          </svg>
+          <div class="lamp-glow-bg"></div>
+          <span class="lamp-hint">Tap to Light</span>
+        </div>
+      </div>
+
       <!-- Blessing & Welcome -->
       <div class="bottom-msg reveal">
         <p class="msg-text">

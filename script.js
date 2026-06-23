@@ -305,3 +305,36 @@ function initCountdown() {
   update();
   setInterval(update, 1000);
 }
+
+// Interactive Blessing Lamp Logic
+function lightLamp(element) {
+  if(!element.classList.contains('lit')) {
+    element.classList.add('lit');
+    
+    // Trigger special golden sparkles
+    triggerGoldenBlessing();
+    
+    // Change the title text to thank them
+    const title = element.parentElement.querySelector('.lamp-title');
+    if(title) {
+      title.innerText = "Thank You for Your Blessings! ✨";
+      title.style.color = "var(--gold-dark)";
+    }
+  }
+}
+
+function triggerGoldenBlessing() {
+  for (let i = 0; i < 60; i++) {
+    setTimeout(() => {
+      let p = new Petal(false);
+      // Gold and glowing white petals
+      p.color = Math.random() > 0.5 ? 'rgba(255, 215, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)';
+      p.speedY = Math.random() * 2 + 1.5;
+      p.size = Math.random() * 10 + 5;
+      petals.push(p);
+      
+      // Remove them after they fall
+      setTimeout(() => { petals.shift(); }, 6000);
+    }, Math.random() * 2000);
+  }
+}
