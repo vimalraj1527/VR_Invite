@@ -230,9 +230,16 @@ function initScrollReveal() {
         reveal.classList.add('active');
         
         // Auto open the sliding envelope when it scrolls into view
-        if (reveal.classList.contains('date-arch-container') && !reveal.classList.contains('opened')) {
+        if (reveal.classList.contains('date-arch-container') && !reveal.hasAttribute('data-auto-opened')) {
+          reveal.setAttribute('data-auto-opened', 'true');
           setTimeout(() => {
             reveal.classList.add('opened');
+            
+            // Auto close after 3.5 seconds
+            reveal.autoCloseTimeout = setTimeout(() => {
+              reveal.classList.remove('opened');
+            }, 3500);
+            
           }, 800); // 800ms delay gives it time to fade in before sliding out
         }
       } else {
@@ -240,10 +247,24 @@ function initScrollReveal() {
         reveal.classList.remove('active');
         if (reveal.classList.contains('date-arch-container')) {
           reveal.classList.remove('opened');
+          reveal.removeAttribute('data-auto-opened');
+          clearTimeout(reveal.autoCloseTimeout);
         }
       }
     });
   };
+  
+  // Add Click listener to manually open/close the Save The Date
+  const dateArch = document.querySelector('.date-arch-container');
+  if (dateArch && !dateArch.hasAttribute('data-click-bound')) {
+    dateArch.setAttribute('data-click-bound', 'true');
+    dateArch.style.cursor = 'pointer';
+    dateArch.addEventListener('click', function() {
+      clearTimeout(this.autoCloseTimeout);
+      this.classList.toggle('opened');
+    });
+  }
+
   window.addEventListener('scroll', revealOnScroll);
   setTimeout(revealOnScroll, 100);
 }

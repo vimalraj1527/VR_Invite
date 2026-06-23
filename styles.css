@@ -76,9 +76,14 @@ html, body {
   transition: all 1s ease;
 }
 .door-lock::before {
-  content: ''; position: absolute; width: 115%; height: 115%;
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 115%; height: 115%; transform: translate(-50%, -50%);
   border-radius: 50%; border: 3px dashed var(--gold-glow);
-  animation: spinSlow 15s linear infinite;
+  animation: spinBorder 15s linear infinite;
+}
+@keyframes spinBorder {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 @keyframes floatAndPulse {
   0% { transform: translate(-50%, -50%) scale(1) translateY(0); box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
@@ -128,8 +133,14 @@ html, body {
   height: auto;
   z-index: 2;
   pointer-events: none;
-  filter: drop-shadow(0 15px 25px rgba(138, 3, 39, 0.25));
   transform-origin: bottom center;
+}
+.real-banana-img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+  filter: contrast(1.1) brightness(0.95);
+  display: block;
 }
 .tree-left {
   left: -20px;
@@ -227,7 +238,7 @@ html, body {
 .couple-section { text-align: center; width: 100%; margin-bottom: clamp(35px, 8vw, 50px); }
 .name { 
   font-family: 'Alex Brush', cursive; 
-  font-size: clamp(65px, 16vw, 90px); 
+  font-size: clamp(50px, 13vw, 80px); 
   font-weight: 400; 
   color: #33000A; 
   text-shadow: 2px 2px 4px rgba(138,3,39,0.15);
