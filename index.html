@@ -17,16 +17,7 @@
 
     <!-- Lock / Tap to Open Button -->
     <div class="door-lock" onclick="openDoors()">
-      <svg viewBox="0 0 100 100" class="lock-icon">
-        <path d="M45,35 C25,25 20,45 35,50" fill="none" stroke-width="3" stroke-linecap="round" />
-        <path d="M55,35 C75,25 80,45 65,50" fill="none" stroke-width="3" stroke-linecap="round" />
-        <path d="M45,35 C45,20 55,20 55,35 C55,50 45,60 45,75 C45,85 55,85 60,75" fill="none" stroke-width="3"
-          stroke-linecap="round" />
-        <path d="M42,55 L35,62 M58,55 L65,62" fill="none" stroke-width="3" stroke-linecap="round" />
-        <path d="M42,25 L46,12 L50,18 L54,12 L58,25" fill="none" stroke-width="3" stroke-linejoin="round" />
-        <circle cx="50" cy="40" r="2.5" fill="var(--maroon)" />
-        <circle cx="50" cy="30" r="2.5" fill="var(--maroon)" />
-      </svg>
+      <img src="vinayagar_real.png" alt="Vinayagar" class="lock-icon" style="border-radius: 50%; object-fit: cover; box-shadow: 0 0 10px rgba(212, 175, 55, 0.8); border: 2px solid var(--gold);">
       <span class="click-text">Tap to Open</span>
     </div>
   </div>
@@ -53,14 +44,6 @@
 
 
 
-    <!-- Full Realistic Banana Trees (Animated) -->
-    <div class="full-banana-tree tree-left">
-      <img src="banana_tree.png" alt="Banana Tree" class="real-banana-img">
-    </div>
-
-    <div class="full-banana-tree tree-right">
-      <img src="banana_tree.png" alt="Banana Tree" class="real-banana-img">
-    </div>
 
     <!-- Engagement Garland (Jasmine & Rose Poo Maalai) -->
     <div class="toranam">
@@ -154,27 +137,10 @@
       <!-- Top Vinayagar -->
       <div class="header-section reveal">
         <div class="pillaiyar-icon">
-          <svg viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45" fill="#FFFDF7" stroke="#D4AF37" stroke-width="2" />
-            <circle cx="50" cy="50" r="40" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="2,2" />
-            <g transform="scale(0.6) translate(33, 33)">
-              <path d="M45,35 C25,25 20,45 35,50" fill="none" stroke="#D91C29" stroke-width="4"
-                stroke-linecap="round" />
-              <path d="M55,35 C75,25 80,45 65,50" fill="none" stroke="#D91C29" stroke-width="4"
-                stroke-linecap="round" />
-              <path d="M45,35 C45,20 55,20 55,35 C55,50 45,60 45,75 C45,85 55,85 60,75" fill="none" stroke="#D91C29"
-                stroke-width="4" stroke-linecap="round" />
-              <path d="M42,55 L35,62 M58,55 L65,62" fill="none" stroke="#D91C29" stroke-width="4"
-                stroke-linecap="round" />
-              <path d="M42,25 L46,12 L50,18 L54,12 L58,25" fill="none" stroke="#D91C29" stroke-width="4"
-                stroke-linejoin="round" />
-              <circle cx="50" cy="40" r="3.5" fill="#D91C29" />
-              <circle cx="50" cy="30" r="3.5" fill="#D91C29" />
-            </g>
-          </svg>
+          <img src="vinayagar_normal.png" alt="Lord Vinayagar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid var(--gold); padding: 2px; background: var(--ivory);">
         </div>
         <h2
-          style="font-family: 'Marcellus', serif; font-size: clamp(14px, 3vw, 18px); font-weight: 700; color: var(--maroon); letter-spacing: 2px;">
+          style="font-family: 'Cormorant Garamond', serif; font-size: clamp(14px, 3vw, 18px); font-weight: 700; color: var(--maroon); letter-spacing: 2px;">
           WITH DIVINE BLESSINGS</h2>
         <div class="traditional-divider">
           <span></span>
@@ -184,8 +150,8 @@
 
       <!-- Ceremony Title -->
       <div class="ceremony-title-box reveal">
-        <h1 class="main-title gold-foil">ENGAGEMENT</h1>
-        <p class="subtitle">Two Hearts... One Beautiful Journey Begins</p>
+        <h1 class="main-title luxury-title">ENGAGEMENT</h1>
+        <p class="subtitle" style="font-size: clamp(22px, 5.5vw, 28px); line-height: 1.4; padding: 0 10px;">Destined by the Divine, Bound by Love... An Eternal Journey Begins</p>
       </div>
 
       <!-- 3D Engagement Rings Divider -->
@@ -319,127 +285,35 @@
         </button>
       </div>
 
-      <!-- Interactive Blessing Lamp -->
-      <div class="blessing-lamp-section reveal">
-        <h3 class="lamp-title">Light the Lamp to Bless Us</h3>
-        <div class="interactive-lamp" onclick="lightLamp(this)">
-          <svg viewBox="0 0 100 200" class="hindu-lamp">
-            <defs>
-              <linearGradient id="lamp-brass" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#5c3a0d"/>
-                <stop offset="25%" stop-color="#d4af37"/>
-                <stop offset="50%" stop-color="#fff6cc"/>
-                <stop offset="75%" stop-color="#d4af37"/>
-                <stop offset="100%" stop-color="#3b2609"/>
-              </linearGradient>
-              <linearGradient id="lamp-brass-dark" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#3b2609"/>
-                <stop offset="35%" stop-color="#b8860b"/>
-                <stop offset="65%" stop-color="#b8860b"/>
-                <stop offset="100%" stop-color="#2a1a05"/>
-              </linearGradient>
-              <filter id="flame-glow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur stdDeviation="4" result="blur" />
-                <feComponentTransfer in="blur" result="glow">
-                  <feFuncA type="linear" slope="2"/>
-                </feComponentTransfer>
-                <feMerge>
-                  <feMergeNode in="glow" />
-                  <feMergeNode in="SourceGraphic" />
-                </feMerge>
-              </filter>
-            </defs>
-            
-            <!-- Hanging Chains -->
-            <path d="M50,0 L50,60" stroke="url(#lamp-brass-dark)" stroke-width="4" stroke-dasharray="4,2"/>
-            <path d="M48,0 L48,60" stroke="url(#lamp-brass)" stroke-width="2" stroke-dasharray="4,2"/>
-            <path d="M52,0 L52,60" stroke="url(#lamp-brass)" stroke-width="2" stroke-dasharray="4,2"/>
-            
-            <!-- Top Hook/Ring -->
-            <ellipse cx="50" cy="55" rx="4" ry="6" fill="none" stroke="url(#lamp-brass)" stroke-width="2"/>
-
-            <!-- Decorative Umbrella / Dome -->
-            <path d="M50,60 C30,65 20,80 15,90 L85,90 C80,80 70,65 50,60 Z" fill="url(#lamp-brass)"/>
-            <!-- Dome Ribs -->
-            <path d="M50,60 Q35,75 25,90 M50,60 Q50,75 50,90 M50,60 Q65,75 75,90" fill="none" stroke="url(#lamp-brass-dark)" stroke-width="1.5"/>
-            <!-- Umbrella Bottom Rim -->
-            <rect x="12" y="90" width="76" height="4" rx="2" fill="url(#lamp-brass-dark)"/>
-
-            <!-- Hanging Bells from Umbrella Rim -->
-            <path d="M20,94 L20,100 M35,94 L35,100 M50,94 L50,100 M65,94 L65,100 M80,94 L80,100" stroke="url(#lamp-brass)" stroke-width="1.5"/>
-            <!-- Bells -->
-            <path d="M17,100 Q20,97 23,100 L23,103 L17,103 Z" fill="url(#lamp-brass)"/>
-            <circle cx="20" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
-            <path d="M32,100 Q35,97 38,100 L38,103 L32,103 Z" fill="url(#lamp-brass)"/>
-            <circle cx="35" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
-            <path d="M47,100 Q50,97 53,100 L53,103 L47,103 Z" fill="url(#lamp-brass)"/>
-            <circle cx="50" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
-            <path d="M62,100 Q65,97 68,100 L68,103 L62,103 Z" fill="url(#lamp-brass)"/>
-            <circle cx="65" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
-            <path d="M77,100 Q80,97 83,100 L83,103 L77,103 Z" fill="url(#lamp-brass)"/>
-            <circle cx="80" cy="104" r="1" fill="url(#lamp-brass-dark)"/>
-
-            <!-- Stem -->
-            <rect x="46" y="94" width="8" height="40" fill="url(#lamp-brass)"/>
-            <ellipse cx="50" cy="110" rx="10" ry="4" fill="url(#lamp-brass-dark)"/>
-            <ellipse cx="50" cy="125" rx="12" ry="5" fill="url(#lamp-brass-dark)"/>
-
-            <!-- Oil Bowl (Agal) -->
-            <path d="M15,135 Q50,175 85,135 Q50,150 15,135 Z" fill="url(#lamp-brass)"/>
-            <ellipse cx="50" cy="135" rx="35" ry="6" fill="#3b2609"/>
-            
-            <!-- 5 Wicks Spouts -->
-            <path d="M25,137 L12,127 Q18,133 22,135 Z" fill="url(#lamp-brass)"/>
-            <path d="M35,139 L25,129 Q30,135 35,137 Z" fill="url(#lamp-brass)"/>
-            <path d="M50,140 L50,130" stroke="url(#lamp-brass)" stroke-width="4"/>
-            <path d="M65,139 L75,129 Q70,135 65,137 Z" fill="url(#lamp-brass)"/>
-            <path d="M75,137 L88,127 Q82,133 78,135 Z" fill="url(#lamp-brass)"/>
-
-            <!-- Bottom Hanging Base Drop -->
-            <path d="M35,145 Q50,175 50,190 Q50,175 65,145 Z" fill="url(#lamp-brass)"/>
-            <ellipse cx="50" cy="160" rx="10" ry="4" fill="url(#lamp-brass-dark)"/>
-            <!-- Final Point -->
-            <circle cx="50" cy="192" r="3" fill="url(#lamp-brass)"/>
-
-            <!-- Flames -->
-            <g class="lamp-flames">
-              <!-- Left 1 -->
-              <path d="M12,127 Q8,117 12,110 Q16,117 12,127 Z" fill="#FFD700" filter="url(#flame-glow)"/>
-              <path d="M12,127 Q10,120 12,115 Q14,120 12,127 Z" fill="#FFF"/>
-              <!-- Left 2 -->
-              <path d="M25,129 Q21,119 25,112 Q29,119 25,129 Z" fill="#FFD700" filter="url(#flame-glow)"/>
-              <path d="M25,129 Q23,122 25,117 Q27,122 25,129 Z" fill="#FFF"/>
-              <!-- Center -->
-              <path d="M50,130 Q45,115 50,105 Q55,115 50,130 Z" fill="#FFD700" filter="url(#flame-glow)"/>
-              <path d="M50,130 Q48,120 50,113 Q52,120 50,130 Z" fill="#FFF"/>
-              <!-- Right 2 -->
-              <path d="M75,129 Q71,119 75,112 Q79,119 75,129 Z" fill="#FFD700" filter="url(#flame-glow)"/>
-              <path d="M75,129 Q73,122 75,117 Q77,122 75,129 Z" fill="#FFF"/>
-              <!-- Right 1 -->
-              <path d="M88,127 Q84,117 88,110 Q92,117 88,127 Z" fill="#FFD700" filter="url(#flame-glow)"/>
-              <path d="M88,127 Q86,120 88,115 Q90,120 88,127 Z" fill="#FFF"/>
-            </g>
-          </svg>
-          <div class="lamp-glow-bg"></div>
-          <span class="lamp-hint">Tap to Light</span>
+      <!-- Interactive Ring Exchange -->
+      <div class="ring-exchange-section reveal" id="ring-section">
+        <button class="bless-button ring-btn" onclick="uniteRings()">
+          <span class="bless-icon">💍</span>
+          <span class="bless-text">Tap to Unite the Rings</span>
+        </button>
+        
+        <!-- The Animated Rings -->
+        <div class="animated-rings-container" id="rings-container">
+          <div class="ring-image-wrapper">
+            <img src="ring_ceremony_hands.png" alt="Ring Ceremony" class="ring-ceremony-img">
+            <div class="ring-image-glow"></div>
+          </div>
+          <p class="rings-promise" id="ring-text">Two Hearts... One Beautiful Promise ✨</p>
         </div>
       </div>
 
       <!-- Blessing & Welcome -->
       <div class="bottom-msg reveal">
         <p class="msg-text">
-          With the blessings of Lord Vinayagar, Lord Murugan, and Sri Pachaivaazhi Amman,
-          our families joyfully invite you to grace this auspicious engagement ceremony
-          with your presence and blessings.
+          As two hearts unite to begin a beautiful journey together, our families joyfully invite 
+          you and your loved ones to grace our engagement ceremony. Please join us to celebrate this 
+          special day and shower us with your warm presence and heartfelt blessings.
         </p>
 
         <!-- Footer -->
         <div class="footer reveal">
-          <p style="font-family: 'Marcellus', serif; color: var(--maroon); font-size: clamp(14px, 4vw, 18px);">With best
-            compliments from</p>
-          <p
-            style="font-family: 'Alex Brush', cursive; font-size: clamp(28px, 7vw, 36px); color: var(--gold-dark); margin-top: 10px;">
-            Family &amp; Friends</p>
+          <p class="footer-line1">With best compliments from</p>
+          <p class="footer-family trending-gold-shine">Family &amp; Friends</p>
         </div>
 
         <div class="bottom-mandala">
@@ -453,13 +327,9 @@
           </svg>
         </div>
 
-        <div class="english-welcome" style="margin-top: 15px;">
-          <h3
-            style="font-family: 'Marcellus', serif; font-size: clamp(18px, 5vw, 22px); color: var(--kumkum); margin-bottom: 5px; font-weight: 700;">
-            Warm Welcome!</h3>
-          <p
-            style="font-family: 'Outfit', sans-serif; font-size: clamp(10px, 2.5vw, 12px); color: var(--text-main); font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">
-            Your presence is our happiness</p>
+        <div class="english-welcome reveal" style="margin-top: 15px;">
+          <h3 class="welcome-title trending-glow-pulse">Warm Welcome!</h3>
+          <p class="welcome-subtitle trending-shimmer-text">Your presence is our happiness</p>
         </div>
       </div>
 
